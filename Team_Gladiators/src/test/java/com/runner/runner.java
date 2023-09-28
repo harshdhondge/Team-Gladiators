@@ -1,15 +1,14 @@
 package com.runner;
 
-import org.junit.runner.RunWith;
 
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = "src/test/resources/Feature/MarketPlace.feature",
-glue = "setDefination",
-plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-)
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
 
 public class runner {
+
+	}
 
 }
