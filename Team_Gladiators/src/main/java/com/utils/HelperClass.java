@@ -10,7 +10,7 @@ public class HelperClass {
 
 	private static HelperClass helperClass;
 	private static WebDriver driver;
-	private static WebDriverWait wait;
+	public static WebDriverWait wait;
 	private static int TIMEOUT = 10;
 
 	HelperClass() {
@@ -36,7 +36,7 @@ public class HelperClass {
 
 	public static void tearDown() {
 		if (driver != null) {
-			driver.close();
+//			driver.close();
 //			driver.quit();
 
 		}
