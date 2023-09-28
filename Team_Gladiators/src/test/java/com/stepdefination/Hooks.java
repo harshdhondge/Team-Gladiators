@@ -12,27 +12,30 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class Hooks {
-
+	boolean isFailed = true;
+	
 	@Before
 	public static void setup() {
 		HelperClass.setUpdriver();
 	}
 	
-	@After(order = 1)
+	
+	@After
 	public void takeScreenshot(Scenario scenario) throws IOException{
 		if(scenario.isFailed()) {
 			TakesScreenshot ts = (TakesScreenshot) HelperClass.getDriver();
 			byte[] scr = ts.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(scr,"image/png","Screenshot");
- 
+
 		}else {
 			TakesScreenshot ts = (TakesScreenshot) HelperClass.getDriver();
 			byte[] scr = ts.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(scr,"image/png","Screenshot");
 		}
 	}
-	@After(order=0)
-	public static void tearDown() {
+	
+	@After(order = 1)
+	public static void tearDown(Scenario scenario) {
 		HelperClass.tearDown();
 	}
 }
