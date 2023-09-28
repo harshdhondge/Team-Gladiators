@@ -7,8 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/Feature/loginDemo.feature",
-glue = "setDefination",
+@CucumberOptions(
+features = "C:\\Users\\psugandhi\\Documents\\GitHub\\Team-Gladiators\\Team_Gladiators\\src\\test\\resources\\feature\\Messaging.feature",
+glue = "com.stepdefination",
 plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 
