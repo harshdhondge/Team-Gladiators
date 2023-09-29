@@ -1,0 +1,2012 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 29, 2023 11:41:03 AM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@AccountSummary</a></li>
+					<li><a href='#'>@SendingMessageToUser</a></li>
+					<li><a href='#'>@s5</a></li>
+					<li><a href='#'>@s1</a></li>
+					<li><a href='#'>@MessageHistory</a></li>
+					<li><a href='#'>@s3</a></li>
+					<li><a href='#'>@s2</a></li>
+					<li><a href='#'>@CurrentBalance</a></li>
+					<li><a href='#'>@s6</a></li>
+					<li><a href='#'>@s4</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$87%'>
+                    <span class='strong'>7</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12%'>
+                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='95%'>
+                    <span class='strong'>20</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='4%'>
+                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='98%'>
+                    <span class='strong'>128</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    1</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Account Information</span>
+						<span class='test-time'>Sep 29, 2023 11:41:03 AM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 08.122</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify Successful Account Summary Display</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@AccountSummary</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='4' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='5' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='6' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.AccountInfoStepDefinition.validates_user_lands_on_his_own_account())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validates user lands on his own Account</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='8' status='pass'>
+
+	<span class='duration right label'>00 00 07.694</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify Display of Account Balance</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@CurrentBalance</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='10' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='11' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='12' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.AccountInfoStepDefinition.user_is_on_the_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User is on the Home Page</div>
+
+
+		</li>
+		<li test-id='13' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.AccountInfoStepDefinition.validates_the_account_balance())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validates the Account Balance</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>login</span>
+						<span class='test-time'>Sep 29, 2023 11:41:19 AM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='16' status='pass'>
+
+	<span class='duration right label'>00 00 05.525</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: validate</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='18' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='19' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Marketplace verification</span>
+						<span class='test-time'>Sep 29, 2023 11:41:25 AM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='22' status='pass'>
+
+	<span class='duration right label'>00 00 10.817</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: schedule advertisement</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s1</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='24' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='25' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='26' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_marketplace())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given click on Marketplace</div>
+
+
+		</li>
+		<li test-id='27' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.go_to_my_advertisement())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When go to my advertisement</div>
+
+
+		</li>
+		<li test-id='28' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_new_advertisement())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on new advertisement</div>
+
+
+		</li>
+		<li test-id='29' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.create_advertisement())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then create advertisement</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='31' status='pass'>
+
+	<span class='duration right label'>00 00 10.938</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: select address per advertisement</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='33' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='34' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='35' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_marketplace())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given click on Marketplace</div>
+
+
+		</li>
+		<li test-id='36' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.go_to_business_dir())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When go to business dir</div>
+
+
+		</li>
+		<li test-id='37' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_advertisemen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on advertisemen</div>
+
+
+		</li>
+		<li test-id='38' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.assert_address())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Assert Address</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='40' status='pass'>
+
+	<span class='duration right label'>00 00 16.132</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Custom search filters</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s3</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='42' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='43' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='44' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_marketplace())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given click on Marketplace</div>
+
+
+		</li>
+		<li test-id='45' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_advertisement())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on Advertisement</div>
+
+
+		</li>
+		<li test-id='46' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_show_more_filters())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on show more filters</div>
+
+
+		</li>
+		<li test-id='47' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.add_filters())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And add filters</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='49' status='pass'>
+
+	<span class='duration right label'>00 00 09.912</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: category browsing</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s4</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='51' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='52' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='53' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_marketplace())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given click on Marketplace</div>
+
+
+		</li>
+		<li test-id='54' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.go_to_advertisements())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given go to advertisements</div>
+
+
+		</li>
+		<li test-id='55' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.search_for_food())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When search for food</div>
+
+
+		</li>
+		<li test-id='56' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_food())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on food</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='58' status='pass'>
+
+	<span class='duration right label'>00 00 10.007</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: orderBy advertisement categories</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s5</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='60' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='61' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='62' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_marketplace())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given click on Marketplace</div>
+
+
+		</li>
+		<li test-id='63' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.go_to_business_directory())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given go to business directory</div>
+
+
+		</li>
+		<li test-id='64' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_order_by())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on orderBy</div>
+
+
+		</li>
+		<li test-id='65' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_it())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click on it</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='67' status='pass'>
+
+	<span class='duration right label'>00 00 11.047</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: custom advertisement fields</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s6</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='69' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='70' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='71' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_marketplace())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given click on Marketplace</div>
+
+
+		</li>
+		<li test-id='72' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.go_to_advertisement_interests())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given go to advertisement interests</div>
+
+
+		</li>
+		<li test-id='73' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_add_new())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on add new</div>
+
+
+		</li>
+		<li test-id='74' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.fill_the_valid_data())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And fill the valid data</div>
+
+
+		</li>
+		<li test-id='75' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.MarketPlaceDefination.click_on_add())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click on add</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='77'>
+					<div class='test-heading'>
+						<span class='test-name'>Checking up the Mesaaging feature</span>
+						<span class='test-time'>Sep 29, 2023 11:42:34 AM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='78' status='pass'>
+
+	<span class='duration right label'>00 00 10.719</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Sending rich text message to user</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@SendingMessageToUser</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='80' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='81' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='82' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Meassaging.clicks_on_the_messages())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Clicks on the messages</div>
+
+
+		</li>
+		<li test-id='83' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Meassaging.user_clicks_on_new_message())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on new message</div>
+
+
+		</li>
+		<li test-id='84' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Meassaging.sends_the_rich_text_message())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Sends the rich text message</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='86' status='pass'>
+
+	<span class='duration right label'>00 00 08.302</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Message history (inbox, sent, trash)</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@MessageHistory</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='88' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='89' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='90' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Meassaging.user_clicks_on_the_messages())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User clicks on the messages</div>
+
+
+		</li>
+		<li test-id='91' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Meassaging.navigates_inbox_sent_trash())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Navigates Inbox Sent Trash</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='93'>
+					<div class='test-heading'>
+						<span class='test-name'>To validate the payments feature in application</span>
+						<span class='test-time'>Sep 29, 2023 11:42:53 AM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='94' status='pass'>
+
+	<span class='duration right label'>00 00 13.888</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User to user payments</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='96' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='97' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='98' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_pay_to_user())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on Pay to user</div>
+
+
+		</li>
+		<li test-id='99' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_and_and_click_on_next(java.lang.String,java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter "abc", "abcd" and "10" and click on next</div>
+
+
+		</li>
+		<li test-id='100' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_confirm_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on confirm button</div>
+
+
+		</li>
+		<li test-id='101' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.asssert_the_message_of_successfully_processed_payment())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Asssert the message of successfully processed payment</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='103' status='pass'>
+
+	<span class='duration right label'>00 00 10.064</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To check the Scheduled Payments in application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='105' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='106' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='107' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_banking_and_click_on_scheduled_payments())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on banking and click on scheduled payments</div>
+
+
+		</li>
+		<li test-id='108' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.select_status_as_scheduled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Select Status as scheduled</div>
+
+
+		</li>
+		<li test-id='109' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_first_transacation_from_the_result_which_appear())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on first transacation from the result which appear</div>
+
+
+		</li>
+		<li test-id='110' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.assert_the_message_of_scheduled_payment_details())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then assert the message of Scheduled payment details</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='112' status='pass'>
+
+	<span class='duration right label'>00 00 12.238</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validating recurring payments functionality of application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='114' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='115' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='116' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_pay_to_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on Pay to user button</div>
+
+
+		</li>
+		<li test-id='117' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_to_user_then_enter_description(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter to user "mister x" then enter description "recurring payment"</div>
+
+
+		</li>
+		<li test-id='118' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_amount(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter amount "10"</div>
+
+
+		</li>
+		<li test-id='119' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.select_scheduling_as_recurring_paymets_and_click_future_date())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Select Scheduling as recurring paymets and click future date</div>
+
+
+		</li>
+		<li test-id='120' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_first_occurrence_date(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter First occurrence date "10/03/2023"</div>
+
+
+		</li>
+		<li test-id='121' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.select_mannually_cancelled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Select mannually cancelled</div>
+
+
+		</li>
+		<li test-id='122' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_process_every_and_select_appropriate_month_week_or_day(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter process every "1" and select appropriate month,week or day</div>
+
+
+		</li>
+		<li test-id='123' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_next())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on next</div>
+
+
+		</li>
+		<li test-id='124' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_confirmBTN())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on confirmBTN</div>
+
+
+		</li>
+		<li test-id='125' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.assert_the_message())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Assert the message</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='127' status='pass'>
+
+	<span class='duration right label'>00 00 11.282</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validating payment requests functionality of application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='129' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='130' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='131' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_banking_tab_and_click_on_payment_requests_option())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on banking tab and click on payment requests option</div>
+
+
+		</li>
+		<li test-id='132' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_send_a_new_request())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on send a new request</div>
+
+
+		</li>
+		<li test-id='133' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_receiver_and_description(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter receiver Akash and description New_payment_Request</div>
+
+
+		</li>
+		<li test-id='134' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_amount_and_expiration_date(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter amount "10" and expiration date "10/03/2023"</div>
+
+
+		</li>
+		<li test-id='135' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.select_scheduling_as_monthly_installments())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Select scheduling as monthly installments</div>
+
+
+		</li>
+		<li test-id='136' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.enter_no_of_installments_and_check_the_first_installment_is_immediate_box(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter no of installments "2" and check the first installment is immediate box</div>
+
+
+		</li>
+		<li test-id='137' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_on_confirm())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on confirm</div>
+
+
+		</li>
+		<li test-id='138' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.PaymentsDefination.click_confirm_on_popup())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Click confirm on popup</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='140'>
+					<div class='test-heading'>
+						<span class='test-name'>Register form</span>
+						<span class='test-time'>Sep 29, 2023 11:43:40 AM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='141' status='pass'>
+
+	<span class='duration right label'>00 00 04.961</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Registration form</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s1</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='143' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.RegistrationFormStepdef.visit_this_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit this site "https://license.cyclos.org/app/guest/register"</div>
+
+
+		</li>
+		<li test-id='144' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.RegistrationFormStepdef.provide_valid_data_in_each_field())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When provide valid data in each field</div>
+
+
+		</li>
+		<li test-id='145' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.RegistrationFormStepdef.assert_the_finish_registration())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Assert the Finish registration</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='147'>
+					<div class='test-heading'>
+						<span class='test-name'>check user functionalities</span>
+						<span class='test-time'>Sep 29, 2023 11:43:45 AM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='148' status='pass'>
+
+	<span class='duration right label'>00 00 12.873</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Update Profile</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>SheetName</td><td>Rownumber</td></tr><tr><td>UpdateDataSheet</td><td>0</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='149' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Update Profile</div>
+
+				<div class='category-list'>
+						<span class='category label'>@s2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='151' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.stepdefination.Login.visit_the_site(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</h6>
+
+				</li>
+				<li test-id='152' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.stepdefination.Login.enter_username_and_password_and_click_on_submit()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</h6>
+
+				</li>
+				<li test-id='153' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.stepdefination.UserFunctionsStepDef.click_on_profile()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on profile</h6>
+
+				</li>
+				<li test-id='154' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.stepdefination.UserFunctionsStepDef.click_on_edit_button_in_my_profile()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on edit button in my profile</h6>
+
+				</li>
+				<li test-id='155' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.stepdefination.UserFunctionsStepDef.enter_the_and(java.lang.String,java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And enter the "UpdateDataSheet" and 0</h6>
+
+				</li>
+				<li test-id='156' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.stepdefination.UserFunctionsStepDef.click_on_save()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click on save</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='158' status='pass'>
+
+	<span class='duration right label'>00 00 17.465</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Multiple phones</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s3</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='160' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='161' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='162' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_profile())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on profile</div>
+
+
+		</li>
+		<li test-id='163' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_edit_button_in_my_profile())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on edit button in my profile</div>
+
+
+		</li>
+		<li test-id='164' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_add_mobile_phone_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click add Mobile phone button</div>
+
+
+		</li>
+		<li test-id='165' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.add_mobile_name_and_mobile_number())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And add mobile name and mobile number</div>
+
+
+		</li>
+		<li test-id='166' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_save_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click on save button</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='168' status='pass'>
+
+	<span class='duration right label'>00 00 13.676</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Manage passwords</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s4</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='170' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='171' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='172' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_profile())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on profile</div>
+
+
+		</li>
+		<li test-id='173' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_passwords())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on Passwords</div>
+
+
+		</li>
+		<li test-id='174' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_change())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on change</div>
+
+
+		</li>
+		<li test-id='175' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.enter_old_pass_and_new_pass())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And enter old pass and new pass</div>
+
+
+		</li>
+		<li test-id='176' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_submit_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click on submit button.</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='178' status='pass'>
+
+	<span class='duration right label'>00 00 16.825</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Manage Contacts</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@s5</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='180' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='181' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='182' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_contacts())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on Contacts</div>
+
+
+		</li>
+		<li test-id='183' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_add_new_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on add new button</div>
+
+
+		</li>
+		<li test-id='184' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.provide_details_of_contact())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And provide details of contact</div>
+
+
+		</li>
+		<li test-id='185' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_add())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on add1</div>
+
+
+		</li>
+		<li test-id='186' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_the_item())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on the item</div>
+
+
+		</li>
+		<li test-id='187' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.click_on_remove_from_contacts())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on remove from contacts</div>
+
+
+		</li>
+		<li test-id='188' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.UserFunctionsStepDef.assert_an_item_is_deleted_from_contacts())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then assert an item is deleted from contacts</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='190'>
+					<div class='test-heading'>
+						<span class='test-name'>Validate Vouchers functionality</span>
+						<span class='test-time'>Sep 29, 2023 11:44:46 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='191' status='fail'>
+
+	<span class='duration right label'>00 00 20.385</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Buy and print voucher</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='193' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.visit_the_site(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given visit the site "https://demo.cyclos.org/ui/login"</div>
+
+
+		</li>
+		<li test-id='194' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.Login.enter_username_and_password_and_click_on_submit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter username and password and click on submit</div>
+
+
+		</li>
+		<li test-id='195' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.VoucherDefinition.click_on_marketplace())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on marketplace</div>
+
+
+		</li>
+		<li test-id='196' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.VoucherDefinition.click_on_my_vouchers())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on My Vouchers</div>
+
+
+		</li>
+		<li test-id='197' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.VoucherDefinition.click_on_buy_voucher())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on buy voucher</div>
+
+
+		</li>
+		<li test-id='198' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.VoucherDefinition.select_gift_voucher())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Select Gift Voucher</div>
+
+
+		</li>
+		<li test-id='199' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefination.VoucherDefinition.enter_no_of_vouchers_enter_amount_select_usage_and_click_on_next(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Enter no. of vouchers "1", enter amount "10", select Usage and click on next</div>
+
+
+		</li>
+		<li test-id='200' class='node and Fail' status='Fail'>
+			<div class="step-name" title="(com.stepdefination.VoucherDefinition.click_on_confirmm())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And Click on confirmm</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Confirm']"}
+  (Session info: chrome=117.0.5938.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [44ee913c0d2a5fc1a006a646bf2995e1, findElement {using=xpath, value=//span[text()='Confirm']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\PSUGAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58611/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 44ee913c0d2a5fc1a006a646bf2995e1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.click(Unknown Source)
+	at com.actions.VoucherActions.clickConfirm(VoucherActions.java:56)
+	at com.stepdefination.VoucherDefinition.click_on_confirmm(VoucherDefinition.java:152)
+	at ✽.Click on confirmm(file:///C:/Users/psugandhi/Documents/GitHub/Team-Gladiators/Team_Gladiators/src/test/resources/feature/Vouchers.feature:11)
+</textarea>
+		</li>
+		<li test-id='201' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.stepdefination.VoucherDefinition.click_on_print_option())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Click on print option</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@AccountSummary</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:41:03 AM</td>
+										<td class='linked' test-id='2'>Verify Successful Account Summary Display</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SendingMessageToUser</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:42:34 AM</td>
+										<td class='linked' test-id='78'>Sending rich text message to user</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@s5</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:42:13 AM</td>
+										<td class='linked' test-id='58'>orderBy advertisement categories</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2023 11:44:29 AM</td>
+										<td class='linked' test-id='178'>Manage Contacts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@s1</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:41:25 AM</td>
+										<td class='linked' test-id='22'>schedule advertisement</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2023 11:43:40 AM</td>
+										<td class='linked' test-id='141'>Registration form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@MessageHistory</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:42:44 AM</td>
+										<td class='linked' test-id='86'>Message history (inbox, sent, trash)</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@s3</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:41:47 AM</td>
+										<td class='linked' test-id='40'>Custom search filters</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2023 11:43:58 AM</td>
+										<td class='linked' test-id='158'>Multiple phones</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@s2</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:41:36 AM</td>
+										<td class='linked' test-id='31'>select address per advertisement</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2023 11:43:45 AM</td>
+										<td class='linked' test-id='149'>Update Profile</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@CurrentBalance</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:41:11 AM</td>
+										<td class='linked' test-id='8'>Verify Display of Account Balance</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@s6</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:42:23 AM</td>
+										<td class='linked' test-id='67'>custom advertisement fields</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@s4</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:42:03 AM</td>
+										<td class='linked' test-id='49'>category browsing</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 29, 2023 11:44:16 AM</td>
+										<td class='linked' test-id='168'>Manage passwords</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 11:44:56 AM</td>
+										<td class='linked' test-id='200'>And Click on confirmm</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Confirm']"}
+  (Session info: chrome=117.0.5938.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.12.1', revision: '8e34639b11'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [44ee913c0d2a5fc1a006a646bf2995e1, findElement {using=xpath, value=//span[text()='Confirm']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\PSUGAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58611/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 44ee913c0d2a5fc1a006a646bf2995e1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.click(Unknown Source)
+	at com.actions.VoucherActions.clickConfirm(VoucherActions.java:56)
+	at com.stepdefination.VoucherDefinition.click_on_confirmm(VoucherDefinition.java:152)
+	at ✽.Click on confirmm(file:///C:/Users/psugandhi/Documents/GitHub/Team-Gladiators/Team_Gladiators/src/test/resources/feature/Vouchers.feature:11)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>8</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>130</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 29, 2023 11:41:03 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 29, 2023 11:45:07 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 04 03.847</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>version</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@AccountSummary</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@SendingMessageToUser</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@s5</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@s1</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@MessageHistory</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@s3</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@s2</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@CurrentBalance</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@s6</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@s4</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 8,
+				passParent: 7,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 21,
+				passChild: 20,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 130,
+				passGrandChild: 128,
+				failGrandChild: 1,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 1,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Account Information":15.851,"login":5.525,"Marketplace verification":68.931,"Checking up the Mesaaging feature":19.036,"To validate the payments feature in application":47.51,"Register form":4.961,"check user functionalities":60.883,"Validate Vouchers functionality":20.386
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

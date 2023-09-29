@@ -8,19 +8,18 @@ import java.util.Properties;
 
 import org.openqa.selenium.support.PageFactory;
 
-import com.locators.LoginpageLocators;
 import com.utils.HelperClass;
 
 public class LoginpageAction {
 
-	LoginpageLocators loginpageLocators = null;
+	com.locators.LoginpageLocators loginpageLocators = null;
 	
 String username, password;
 	 
 
 		public LoginpageAction() {
 			super();
-			this.loginpageLocators = new LoginpageLocators();
+			this.loginpageLocators = new com.locators.LoginpageLocators();
 			PageFactory.initElements(HelperClass.getDriver(), loginpageLocators);
 		}
 		
