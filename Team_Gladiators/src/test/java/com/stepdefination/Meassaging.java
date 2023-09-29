@@ -12,7 +12,7 @@ public class Meassaging {
 	@Then("Clicks on the messages")
 	public void clicks_on_the_messages() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
-		dashboardActions.clkMessagesOption();
+		messagesActions.clkMessagesOption();
 	}
 
 	@Then("User clicks on new message")

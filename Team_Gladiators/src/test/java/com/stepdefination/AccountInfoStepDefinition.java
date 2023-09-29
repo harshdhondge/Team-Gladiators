@@ -3,30 +3,28 @@ package com.stepdefination;
 
 import com.actions.BankingActions;
 import com.actions.DashboardActions;
+import com.actions.LoginpageAction;
 import com.actions.MessagesActions;
-import com.utils.HelperClass;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
 public class AccountInfoStepDefinition {
-	
+	LoginpageAction loginpageAction = new LoginpageAction();
 	DashboardActions dashboardActions = new DashboardActions();
 	BankingActions bankingActions = new BankingActions();
 	MessagesActions messagesActions = new MessagesActions();
 	
 	String byUser;
 	
-	@Given("User should be on {string}")
-	public void user_should_be_on(String url) {
-	    HelperClass.openPage(url);
-	}
+//	@Given("User should be on {string}")
+//	public void user_should_be_on(String url) {
+//	    HelperClass.openPage(url);
+//	}
 	
-	@When("Enter Username and Password and click on submit")
-	public void enter_username_and_password_and_click_on_submit() {
-	   loginPageActions.login();
-	}
+//	@When("Enter Username and Password and click on submit")
+//	public void enter_username_and_password_and_click_on_submit() {
+//	   loginpageAction.login();
+//	}
 
 
 	@Then("Validates user lands on his own Account")

@@ -24,8 +24,8 @@ public class BankingActions {
 		PageFactory.initElements(HelperClass.getDriver(), bankingLocators);
 	}
 	
-	public void clkBankingOption() {
-	    HelperClass.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	public void clkBankingOption() throws InterruptedException {
+		Thread.sleep(2000);
 	    bankingLocators.banking.click();
 	}
 	

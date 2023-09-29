@@ -47,8 +47,8 @@ public class CustomSearchAction {
 	}
 	
 	
-	public void customSearch()  {
-		File file = new File("C:\\Users\\hdhondge\\eclipse-workspace\\Team_Gladiators\\src\\test\\resources\\data3.properties");
+	public void customSearch() throws InterruptedException  {
+		File file = new File("src\\test\\resources\\data3.properties");
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);
@@ -72,6 +72,7 @@ public class CustomSearchAction {
 		this.key(keyword, min, max, begindate, enddate);;;
 		
 		customSearchLoc.showADElement.click();
+		Thread.sleep(3000);
 
 	}
 }

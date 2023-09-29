@@ -13,8 +13,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.locators.LoginPageLoctaors;
 import com.locators.ScheduleAdvertisementLoc;
 import com.utils.HelperClass;
 
@@ -51,7 +49,7 @@ public class ScheduleAdvertisementAction {
 	}
 	
 	public void ScheduleAd()  {
-		File file = new File("C:\\Users\\hdhondge\\eclipse-workspace\\Team_Gladiators\\src\\test\\resources\\data3.properties");
+		File file = new File("src\\test\\resources\\data3.properties");
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);

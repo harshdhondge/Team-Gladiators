@@ -68,8 +68,7 @@ public class RegistrationFormActions {
 	}
 
 	public void register() {
-		File file = new File(
-				"C:\\SelfStudy\\Java\\Training\\Eclipse_practice\\Pilot_Project\\Team-Gladiators\\Team_Gladiators\\src\\test\\resources\\AlInputData.properties");
+		File file = new File("src\\test\\resources\\AlInputData.properties");
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);

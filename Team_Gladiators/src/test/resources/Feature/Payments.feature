@@ -1,7 +1,7 @@
 Feature: To validate the payments feature in application
 Background:
-Given User should be on "https://demo.cyclos.org/ui/login"
-When Enter Username and Password and click on submit
+Given visit the site "https://demo.cyclos.org/ui/login" 
+When Enter username and password and click on submit
 
 Scenario: User to user payments
 And Click on Pay to user
@@ -24,7 +24,7 @@ And Click on Pay to user button
 And Enter to user "mister x" then enter description "recurring payment"
 And Enter amount "10"
 And Select Scheduling as recurring paymets and click future date
-And Enter First occurrence date "09/28/2023"
+And Enter First occurrence date "10/03/2023"
 And Select mannually cancelled
 And Enter process every "1" and select appropriate month,week or day
 And click on next 
@@ -37,7 +37,7 @@ Scenario: Validating payment requests functionality of application
 And click on banking tab and click on payment requests option
 And click on send a new request
 And Enter receiver Akash and description New_payment_Request
-And Enter amount "10" and expiration date "09/28/2023"
+And Enter amount "10" and expiration date "10/03/2023"
 And Select scheduling as monthly installments
 And Enter no of installments "2" and check the first installment is immediate box
 And Click on confirm

@@ -5,12 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
-
 import com.locators.CustomeAdvtiseLoc;
-import com.locators.LoginPageLoctaors;
 import com.utils.HelperClass;
 
 public class CustomeAdvtiseAction {
@@ -43,7 +40,7 @@ public class CustomeAdvtiseAction {
 	}
 	
 	public void customeAdv() {
-		File file = new File("C:\\Users\\hdhondge\\eclipse-workspace\\Team_Gladiators\\src\\test\\resources\\data3.properties");
+		File file = new File("src\\test\\resources\\data3.properties");
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);

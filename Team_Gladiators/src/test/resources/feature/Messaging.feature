@@ -1,8 +1,8 @@
 Feature: Checking up the Mesaaging feature
 
 Background: Common Login
-Given User should be on "https://demo.cyclos.org/ui/login"
-When Enter Username and Password and click on submit
+Given visit the site "https://demo.cyclos.org/ui/login" 
+When Enter username and password and click on submit 
 
 @SendingMessageToUser
 Scenario: Sending rich text message to user

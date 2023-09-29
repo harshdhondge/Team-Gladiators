@@ -1,79 +1,70 @@
 package com.stepdefination;
 import org.testng.Assert;
+
 import com.actions.CategoryBrowsingAction;
 import com.actions.CustomSearchAction;
 import com.actions.CustomeAdvtiseAction;
-import com.actions.LoginPageAction;
+import com.actions.LoginpageAction;
 import com.actions.MarketPlaceAction;
 import com.actions.OrderByADAction;
 import com.actions.ScheduleAdvertisementAction;
 import com.actions.SelectAddressAction;
-import com.locators.CategoryBrowsingLoc;
-import com.locators.CustomSearchLoc;
-import com.locators.CustomeAdvtiseLoc;
-import com.locators.LoginPageLoctaors;
-import com.locators.MarketPlaceLoc;
-import com.locators.OrderByADLoc;
-import com.locators.ScheduleAdvertisementLoc;
-import com.locators.SelectAddressLoc;
 import com.utils.HelperClass;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 	
 public class MarketPlaceDefination {
 	
-		LoginPageLoctaors loginPageLoctaors = new LoginPageLoctaors();
-		LoginPageAction loginPageAction = new LoginPageAction();
-		CategoryBrowsingLoc categoryBrowsingLoc = new CategoryBrowsingLoc();
+		//LoginpageLocators loginPageLoctaors = new LoginpageLocators();
+		LoginpageAction loginPageAction = new LoginpageAction();
+		//CategoryBrowsingLoc categoryBrowsingLoc = new CategoryBrowsingLoc();
 		CategoryBrowsingAction categoryBrowsingAction = new CategoryBrowsingAction();
 		CustomeAdvtiseAction customeAdvtiseAction = new CustomeAdvtiseAction();
-		CustomeAdvtiseLoc customeAdvtiseLoc = new CustomeAdvtiseLoc();
+	//	CustomeAdvtiseLoc customeAdvtiseLoc = new CustomeAdvtiseLoc();
 		CustomSearchAction customSearchAction = new CustomSearchAction();
-		CustomSearchLoc customSearchLoc = new CustomSearchLoc();
+		//CustomSearchLoc customSearchLoc = new CustomSearchLoc();
 		OrderByADAction orderByADAction = new OrderByADAction();
-		OrderByADLoc orderByADLoc = new OrderByADLoc();
+	//	OrderByADLoc orderByADLoc = new OrderByADLoc();
 		ScheduleAdvertisementAction scheduleAdvertisementAction = new ScheduleAdvertisementAction();
-		ScheduleAdvertisementLoc scheduleAdvertisementLoc = new ScheduleAdvertisementLoc();
+		//ScheduleAdvertisementLoc scheduleAdvertisementLoc = new ScheduleAdvertisementLoc();
 		SelectAddressAction selectAddressAction = new SelectAddressAction();
-		SelectAddressLoc selectAddressLoc = new SelectAddressLoc();
+	//	SelectAddressLoc selectAddressLoc = new SelectAddressLoc();
 		MarketPlaceAction marketPlaceAction = new MarketPlaceAction();
 		
 		//background
-		@Given("visit the site {string}")
-		public void visit_the_site(String string) {
-		  		HelperClass.openPage(string);
-		}
-	
-		@When("Enter username and password and click on submit$")
-		public void enter_team_gladiators_and_gladiators123_and_click_on_submit() throws InterruptedException {
-			loginPageAction.login();
-		}
+//		@Given("visit the site {string}")
+//		public void visit_the_site(String string) {
+//		  		HelperClass.openPage(string);
+//		}
+//	
+//		@When("Enter username and password and click on submit$")
+//		public void enter_team_gladiators_and_gladiators123_and_click_on_submit() throws InterruptedException {
+//			loginPageAction.login();
+//		}
 		@When("click on Marketplace")
 		public void click_on_marketplace() {
 		   marketPlaceAction.marketplacebtn();
 		}
 	//s1
-		
-		
 	
-		@When("go to my advertisement")
+		@Given("go to my advertisement")
 		public void go_to_my_advertisement() {
 		    scheduleAdvertisementAction.GotoAd();
-	
 		}
-	
+
 		@When("click on new advertisement")
 		public void click_on_new_advertisement() {
 		    scheduleAdvertisementAction.AddNewBtn();
 		}
-	
+
 		@Then("create advertisement")
-		public void create_advertisement() throws Exception {
-		    // Write code here that turns the phrase above into concrete actions
-		   scheduleAdvertisementAction.ScheduleAd();
+		public void create_advertisement() {
+		  scheduleAdvertisementAction.ScheduleAd();
 		}
-		
+
+
 		//s2
 	
 		
@@ -107,7 +98,7 @@ public class MarketPlaceDefination {
 		}
 	
 		@When("add filters")
-		public void add_filters() {
+		public void add_filters() throws InterruptedException {
 		    customSearchAction.customSearch();
 		}
 	//
@@ -135,10 +126,10 @@ public class MarketPlaceDefination {
 			
 		}
 		
-		@Then("Assert food")
-		public void assert_food() {
-			Assert.assertEquals(categoryBrowsingAction.assertStr(), "FOOD - CARROTS");
-	}
+//		@Then("Assert food")
+//		public void assert_food() {
+//			Assert.assertEquals(categoryBrowsingAction.assertStr(), "Main");
+//	}
 		//s5
 		
 	

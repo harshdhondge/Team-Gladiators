@@ -1,6 +1,5 @@
 package com.locators;
 
-import org.apache.hc.core5.http.message.StatusLine.StatusClass;
 import org.checkerframework.common.value.qual.StaticallyExecutable;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

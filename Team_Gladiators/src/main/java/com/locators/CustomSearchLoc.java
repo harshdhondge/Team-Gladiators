@@ -21,7 +21,7 @@ public class CustomSearchLoc {
 	public static WebElement begindatElement;
 	@FindBy(xpath = "//div[@class=\"title-text flex-grow-1 d-flex align-items-center\"]/following::input[7]")
 	public static WebElement endDateeElement;
-	@FindBy(xpath = "//span[text()=\"Show advertisements\"]")
-	public static WebElement showADElement;
+	@FindBy(xpath = "//div[@class=\"title-text flex-grow-1 d-flex align-items-center\"]/following::button[3]")
+	public static WebElement showADElement;	
 
 }

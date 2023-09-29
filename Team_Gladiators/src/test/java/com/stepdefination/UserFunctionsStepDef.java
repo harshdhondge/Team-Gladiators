@@ -4,10 +4,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 
-import com.actions.LoginPageActions;
+import com.actions.LoginpageAction;
 import com.actions.ManageContactsActions;
 import com.actions.ManagePasswordActions;
 import com.actions.MultiplePhonesActions;
@@ -21,22 +20,22 @@ import io.cucumber.java.en.When;
 
 public class UserFunctionsStepDef {
 	UpdateProfileActions updateprofileActions = new UpdateProfileActions();
-	LoginPageActions loginpageactions = new LoginPageActions();
+	LoginpageAction loginpageactions = new LoginpageAction();
 	MultiplePhonesActions multiplePhoneactions = new MultiplePhonesActions();
 	ManagePasswordActions managepassactions = new ManagePasswordActions();
 	ManageContactsActions managecontactsactions = new ManageContactsActions();
 
 	// Scenario 2
 
-	@Given("login to dashboard {string}")
-	public void login_to_dashboard(String url) {
-		HelperClass.openPage(url);
-	}
+//	@Given("login to dashboard {string}")
+//	public void login_to_dashboard(String url) {
+//		HelperClass.openPage(url);
+//	}
 
-	@When("Enter team_gladiators and gladiators123 and click on submit")
-	public void enter_team_gladiators_and_gladiators123_and_click_on_submit() throws Exception {
-		loginpageactions.submit("team_gladiators", "gladiators123");
-	}
+//	@When("Enter team_gladiators and gladiators123 and click on submit")
+//	public void enter_team_gladiators_and_gladiators123_and_click_on_submit() throws Exception {
+//		loginpageactions.submit("team_gladiators", "gladiators123");
+//	}
 
 	@When("click on profile")
 	public void click_on_profile() {
@@ -131,7 +130,7 @@ public class UserFunctionsStepDef {
 		managecontactsactions.EnterInputText();
 	}
 
-	@Then("click on add")
+	@Then("click on add1")
 	public void click_on_add() {
 		managecontactsactions.clickOnsubmit();
 	}

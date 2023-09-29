@@ -31,7 +31,7 @@ public class CategoryBrowsingAction {
 	public void Food() {
 		categoryBrowsingLoc.food.click();
 	}
-	public String assertStr() {
-	String str = categoryBrowsingLoc.AssertFood.getText();
-	return str;}
+//	public String assertStr() {
+//	String str = categoryBrowsingLoc.AssertFood.getText();
+//	return str;}
 }

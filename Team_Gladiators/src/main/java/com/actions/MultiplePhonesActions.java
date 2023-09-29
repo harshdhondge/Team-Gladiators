@@ -55,7 +55,7 @@ public class MultiplePhonesActions {
 	
 	public void addMobileNameNum() {
 		File file = new File(
-				"C:\\SelfStudy\\Java\\Training\\Eclipse_practice\\Pilot_Project\\Team-Gladiators\\Team_Gladiators\\src\\test\\resources\\AlInputData.properties");
+				"src\\test\\resources\\AlInputData.properties");
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);

@@ -37,5 +37,6 @@ public class Hooks {
 	@After(order = 1)
 	public static void tearDown(Scenario scenario) {
 		HelperClass.tearDown();
+		
 	}
 }

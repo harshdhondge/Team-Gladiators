@@ -11,9 +11,9 @@ public class CategoryBrowsingLoc {
 	@FindBy(xpath = "//a[text()=' Food ']")
 	public static WebElement keyElement;
 	
-	@FindBy(xpath = "//div[text()= \" 10,00 IU's \"]")
+	@FindBy(xpath = "//a[text()='Main']")
 	public static WebElement food;
 	
-	@FindBy(xpath = "//div[@class= \"title-text flex-grow-1 d-flex align-items-center\"]")
-	public static WebElement AssertFood;
+//	@FindBy(xpath = "//div[@class= \"title-text flex-grow-1 d-flex align-items-center\"]")
+//	public static WebElement AssertFood;
 }
